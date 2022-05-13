@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking</title>
+    <link rel="stylesheet" href="payment.css">
+    <script type="text/javascript">
+        function pay() {
+        var x = document.getElementById("hour").value;
+        var n = document.getElementById("n").value;
+        var p = document.getElementById("p").value;
+        var l = document.getElementById("l").value;
+        var d = document.getElementById("d").value;
+        var t = document.getElementById("t").value;
+        if(x){
+            if(n){
+                if(p){
+                    if(l){
+                        if(d){
+                            if(t){
+        var res = confirm("Your charge will be : ₹"+x*20);
+        if(res){
+            window.open("pay.html");
+        }
+        }
+    }}}}}
+}    
+    </script>
+</head>
+<body>
+    <h1 class="heading">Smart Parking</h1>
+    <hr>
+<div id="booking">
+    <form>
+    <div class="row">
+   Name : <input type="text" id="n" required>
+    </div>
+    <br>
+    <div class="row">
+       Phone Number :<input type="text" id="p" required>
+        </div>
+        <br>
+        <div class="row">   
+            License Plate :<input type="text" id="l"required>
+            
+        </div>
+            <br>
+            <div class="row">
+                Date :  <input type="date" id="d" placeholder="Date" required>
+                
+            </div>
+            <br>
+            <div class="row">
+                Time :   <input type="time" id="t" placeholder="Time" required>
+                
+            </div>
+            <br>
+            <div class="row">
+                How many Hours : <input type="number" min="1" max="24" id="hour" value="1" placeholder="Time" required>
+            </div>
+            <br>
+    <div class="row">        
+    <button class="button-9" type="submit" value="submit" onclick="pay()">Pay Now</button>
+</div>    
+</form>
+</div>
+</body>
+</html>
